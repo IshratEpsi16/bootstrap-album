@@ -1,0 +1,182 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <link rel='icon' type='image/png' href="{% static 'media\Amazon-Logo-Transparent-PNG.png' %}">
+    
+    <title>Amazon Web Services</title>
+     
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'blog/css/all.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'blog/css/slick.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'blog/css/simple-line-icons.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}" type="text/css" media="all">
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'assets/dist/css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+      <!-- preloader -->
+    <div id="preloader">
+        <div class="book">
+            <div class="inner">
+                <div class="left"></div>
+                <div class="middle"></div>
+                <div class="right"></div>
+            </div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    
+<header>
+  <div class="collapse bg-warning" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-dark">About</h4>
+          <p class="text-muted">Explore more than 100 products and start building on AWS using the Free Tier. Three different types of free offers are available depending on the product used. See below for details on each product.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-dark">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-muted">Follow on Twitter</a></li>
+            <li><a href="#" class="text-muted">Like on Facebook</a></li>
+            <li><a href="#" class="text-muted">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-warning shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+      
+        <img src="{% static 'media/Amazon-Web-Services-AWS-Logo-Transparent-PNG.png'%}" alt="Image Load Error" width="50" height="35" class="p-1">
+        
+        <h4 class="text-dark p-1"><strong>&nbsp;&nbsp;Amazon Web Services</strong></h4>
+      </a>
+      <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light-bold ">AWS Free Tier</h1>
+        <p class="fs-5 text-secondary">Gain free, hands-on experience with the AWS platform, products, and services. Experience The Wide Range of Secure & Scalable AWS Website Hosting Options. Sign Up Today! Explore Low-Cost Ways To Deliver Websites & Web Applications With AWS.</p>
+        <p>
+          <a href="#" class="btn btn-warning text-dark my-2 border border-dark btn-lg"><strong>Sign up</strong></a>
+          <a href="#" class="btn btn-dark text-warning my-2 border border-warning btn-lg"><strong>Sign in</strong></a>
+        </p>
+      </div>
+    </div>
+  </section> 
+  
+  <div class="album py-5 bg-light">
+    <div class="container">
+    
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for i in album_loop %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src={{i.image.url}}>
+
+            <div class="card-body">
+              <p class="card-text">{{i.description}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <small class="text-muted">{{i.time | timesince}}</small>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+       
+        
+
+       
+</main>
+
+
+<footer class="text-muted py-2">
+<div class='vertical-center text-center container'>
+    <button type="button" class="btn btn-warning" ><a href='/next/' class='text-dark text-bold' target='blank' style="text-decoration: none;">View More</a></button>
+    </div>
+  <div class="container p-2">
+   <button class="btn btn-dark "> <p class="float-end mb-1">
+      <a href="#" style="text-decoration: none;" class='text-warning fw-bold'>Back to top</a></button>
+    </p>
+    
+  
+        <p class="fs-6 bg-light text-warning text-center">&copy Copyright Amazon Web Services | All Rights Reserved</p>
+    </div>
+</footer>
+
+
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+     <!-- JAVA SCRIPTS -->
+    <script src="{% static 'blog/js/jquery.min.js' %}"></script>
+    <script src="{% static 'blog/js/popper.min.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'blog/js/slick.min.js' %}"></script>
+    <script src="{% static 'blog/js/jquery.sticky-sidebar.min.js' %}"></script>
+    <script src="{% static 'blog/js/custom.js' %}"></script> 
+  </body>
+</html>

@@ -1,0 +1,158 @@
+ {% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <link rel='icon' type='image/png' href="{% static 'media\Amazon-Logo-Transparent-PNG.png' %}">
+    
+    <title>All Amazon Web Services</title>
+     
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'blog/css/all.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'blog/css/slick.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'blog/css/simple-line-icons.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}" type="text/css" media="all">
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'assets/dist/css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+      <!-- preloader -->
+    <div id="preloader">
+        <div class="book">
+            <div class="inner">
+                <div class="left"></div>
+                <div class="middle"></div>
+                <div class="right"></div>
+            </div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+ <section class="py-5 text-center ">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light-bold ">All Cloud Services</h1>
+        <p class="fs-5 text-secondary">Amazon Web Services offers a broad set of global cloud-based products including compute, storage, databases, analytics, networking, mobile, developer tools, management tools, IoT, security and enterprise applications. These services help organizations move faster, lower IT costs, and scale. AWS is trusted by the largest enterprises and the hottest start-ups to power a wide variety of workloads including: web and mobile applications, game development, data processing and warehousing, storage, archive, and many others.
+</p>
+        
+      </div>
+    </div>
+  </section> 
+  
+  <div class="album py-5 bg-light">
+    <div class="container">
+    
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for i in album_loop2 %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src={{i.image.url}}>
+
+            <div class="card-body">
+              <p class="card-text">{{i.description}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <small class="text-muted">{{i.time | timesince}}</small>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+       
+        
+
+</main>   
+
+<div class="container p-3">
+    <h1 ><strong>What is AWS?</strong></h1>
+    <p class="fs-5 text-secondary">AWS Outposts is a fully managed service that offers the same AWS infrastructure, AWS services, APIs, and tools to virtually any datacenter, co-location space, or on-premises facility for a truly consistent hybrid experience. AWS Outposts is ideal for workloads that require low latency access to on-premises systems, local data processing, data residency, and migration of applications with local system interdependencies.
+
+AWS compute, storage, database, and other services run locally on Outposts, and you can access the full range of AWS services available in the Region to build, manage, and scale your on-premises applications using familiar AWS services and tools.
+
+</p>
+<video width="320" height="240" controls>
+  <source src="{% static 'media/Amazon Route 53 Application Recovery Controller  Amazon Web Services.mp4'%}" type="video/mp4">
+  
+
+</video>
+<p class="fs-5 text-secondary">Amazon Web Services (AWS) is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis. These cloud computing web services provide a variety of basic abstract technical infrastructure and distributed computing building blocks and tools. One of these services is Amazon Elastic Compute Cloud (EC2), which allows users to have at their disposal a virtual cluster of computers, available all the time, through the Internet.To know more about AWS follow our youtube channel.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a9__D53WsUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<footer class="text-muted py-2">
+
+  <div class="container p-2">
+   <button class="btn btn-warning "> <p class="float-end mb-1">
+      <a href="#" style="text-decoration: none;" class='text-dark fw-bold'>Back to top</a></button>
+    </p>
+    
+  
+        <p class="fs-6 bg-light text-warning text-center">&copy Copyright Amazon Web Services | All Rights Reserved</p>
+    </div>
+</footer>
+
+
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+     <!-- JAVA SCRIPTS -->
+    <script src="{% static 'blog/js/jquery.min.js' %}"></script>
+    <script src="{% static 'blog/js/popper.min.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'blog/js/slick.min.js' %}"></script>
+    <script src="{% static 'blog/js/jquery.sticky-sidebar.min.js' %}"></script>
+    <script src="{% static 'blog/js/custom.js' %}"></script>
+</body>
+</html>
+
+
+
